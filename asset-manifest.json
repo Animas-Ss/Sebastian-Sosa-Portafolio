@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/css/main.e2c3e510.css",
+    "main.js": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/js/main.f2ac9e4d.js",
+    "static/media/Slayer.mp3": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/media/Slayer.6d0cda911a4ffc808845.mp3",
+    "static/media/pngegg.png": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/media/pngegg.41b4b419597f76b53a58.png",
+    "static/media/javascript.pdf": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/media/javascript.73f31eab2af5b7df6f35.pdf",
+    "static/media/sebastian.jpg": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/media/sebastian.2ac40655cf5775391a52.jpg",
+    "index.html": "/Animas-Ss/Sebastian-Sosa-Portafolio/index.html",
+    "main.e2c3e510.css.map": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/css/main.e2c3e510.css.map",
+    "main.f2ac9e4d.js.map": "/Animas-Ss/Sebastian-Sosa-Portafolio/static/js/main.f2ac9e4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2c3e510.css",
+    "static/js/main.f2ac9e4d.js"
+  ]
+}
