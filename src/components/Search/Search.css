@@ -1,0 +1,85 @@
+.search
+{
+  position: absolute;
+  top: 20px;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 4rem;
+  height: 100%;
+  border: 6px solid #cfd1e1;
+  border-radius: 50%;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 1),
+  8px 8px 25px rgba( 0, 0, 0, 0.15),
+  inset 3px 3px 10px rgba( 0, 0, 0, 0.1),
+  inset -4px -4px 15px rgba(255,255, 255, 1);
+  transition: 1s ease-in-out;
+  
+}
+
+.search-box:hover
+{
+  width: 400px;
+  height: 100%;
+  border-radius: 0.6em;
+  justify-content: space-between;
+}
+
+.search-box:focus-within
+{
+  width: 400px;
+  border-radius: 0.6em;
+  justify-content: space-between;
+  cursor: text;
+}
+
+.search-box input
+{
+  position:absolute;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px 25px;
+  outline: none;
+  font-size: 1.1em;
+  color: #000;
+  background: transparent;
+}
+/*-------------------------------------*/
+.search-box input::placeholder
+{
+  color: transparent;
+  transition: 1s;
+}
+
+.search-box:hover input::placeholder
+{
+  color: #000;
+}
+/*--------------------------------*/
+.search-box .search-icono
+{
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  font-size: 25px;
+}
+
+/*_______________________________________________________*/
+
+@media only screen and (max-width: 768px){
+ .search-box{
+   display: none;
+ }
+}

@@ -1,0 +1,160 @@
+.tecnologias-container{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+}
+
+.tecnologias
+{
+  position: absolute;
+  left: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  width: 50%;
+  height: 100%;
+  gap: 20px;
+  z-index: 4;
+}
+
+
+.tecnologias .tec{
+  position: relative;
+  width: 180px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1em;
+  overflow: hidden;
+}
+.tecnologias .tec-header{
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background: var(--color);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+}
+
+.tecnologias .tec-header-icono{
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  background: rgba(255,255,255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  border: 1px solid rgba(255,255,255, 0.5);
+  border-radius: 50%;
+  font-size: 1.5em;
+  backdrop-filter: blur(2px);
+  z-index: 4;
+}
+.tecnologias .tec-title-contenedor{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: 70px;
+  left: -65px;
+  transform: rotate(-90deg);
+  z-index: 3;
+}
+.tecnologias .tec-titulo{
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  font-family: "Aton", sans-serif;
+}
+.icon-docker{
+  position: absolute;
+  font-size: 200px;
+  bottom: -70px;
+  right: -40px;
+}
+
+/*paginacion*/
+
+.container-paginacion{
+  position: absolute;
+  top: 40px;
+  left: 62%;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+/*carta seleccionada*/
+.container-card-select{
+  position: absolute;
+  top: 30px;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  z-index: 4;
+}
+
+/*prueba de movimiento con click*/
+
+
+/*----------------------------------------------------*/
+@media only screen and (max-width: 768px){
+.tecnologias-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.tecnologias{
+  width: 100%;
+  height: 100px;
+  top:0;
+  left: 0;
+}
+  .tecnologias .tec{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  gap: 1px;
+  overflow: hidden;
+}
+  .tecnologias .tec-header{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+  .tecnologias .tec-header-icono{
+    position: absolute;
+    top: 10px;
+    left: 45px;
+  width: 70px;
+  height: 70px;
+  font-size: 2em;
+}
+  .tecnologias .tec-title-contenedor{
+  left: 20px;
+  bottom: 20px;
+  width: 100%;
+  transform: rotate(0deg);
+  z-index: 3;
+}
+  .tecnologias .tec-titulo{
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  font-family: "Aton", sans-serif;
+}
+  .container-paginacion{
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 5; 
+  }
+}
