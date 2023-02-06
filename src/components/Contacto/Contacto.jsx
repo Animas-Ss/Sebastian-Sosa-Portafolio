@@ -14,9 +14,7 @@ function Contacto() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(contacto);
     setAvion(!avion)
-
     emailjs.sendForm('service_w9j9whw', 'template_r8uqa6a', e.target, 'vmmtkeadVj4mhtHQc')
       .then((result) => {
         console.log(result.text);
@@ -52,8 +50,8 @@ function Contacto() {
           </div>
           <div className="formulario-izquierda">
             <div className="formulario-izquierda-header">
-              <h3></h3>
-              <small></small>
+              <h3>Envia tu preguntas</h3>
+              <small>Gracias por contactarme</small>
             </div>
             <form className="formulario-izquierda-datos" onSubmit={handleSubmit}>
               <div className="inputBox">
@@ -92,7 +90,7 @@ function Contacto() {
                   required="required"
                   onChange={handleChange}
                   value={contacto.mensaje}
-                ></textarea>
+                />
                 <span>Mensaje:</span>
                 <i></i>
               </div>

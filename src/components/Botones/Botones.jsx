@@ -1,7 +1,7 @@
 import './Botones.css';
-import Contacto from '../Contacto/Contacto.jsx';
 
-function Botones({contenido, setMocontacto, handleModal}){
+
+function Botones({contenido, handleModal}){
 
   
   return(

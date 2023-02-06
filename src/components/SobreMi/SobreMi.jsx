@@ -13,8 +13,6 @@ function SobreMi() {
   const [manos, setManos] = useState(false)
 
   const handlePintar = (e) => {
-    //console.log(e.target.name);
-    //console.log(e.target.value);
     setManos(!manos)
     setMenuInfo(() => ({
       [e.target.name]: !e.target.name.value,
@@ -33,18 +31,16 @@ function SobreMi() {
         <div className={`sobre-disciplina-inferior ${menuInfo.aprender ? "activo-inferior" : null}`}>aprender</div>
         <div className={`sobre-disciplina ${menuInfo.desarrollar ? "activo-arriba" : null}`}>desarrollar</div>
         <div className={`sobre-disciplina-inferior ${menuInfo.desarrollar ? "activo-inferior" : null}`}>desarrollar</div>
-        {//<div className='sobre-imagen'></div>
-        }
-
+     
         <div className='sobre-informacion'>
           <span></span>
           <div className='sobre-informacion-datos'>
             <img src={SobreMano} 
               name="manos" 
-              className={`sobre-image-abajo ${manos ? "activo-image-abajo" : null}`}></img>
+              className={`sobre-image-abajo ${manos ? "activo-image-abajo" : null}`} alt="manos robot"/>
             <img src={SobreMano} 
               name="manos" 
-              className={`sobre-image-arriba ${manos ? "activo-image-arriba" : null}`}></img>
+              className={`sobre-image-arriba ${manos ? "activo-image-arriba" : null}`} alt="manos robot"/>
             <div className='sobre-informacion-titulo'>
               {menuInfo.disciplina && <h3>DISCIPLINA</h3>}
               {menuInfo.crecer && <h3>CRECER</h3>}

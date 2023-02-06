@@ -18,9 +18,7 @@ const useAudio = url => {
   //efecto para escuchar el cambio de estado
   useEffect(() => {
     playing ? audio.play() : audio.pause();
-  },
-    [playing]
-  );
+  },[playing]);
 
   //efecto que prende se fija si al musica esta prendida si esta prendida la apaga en false , despues retorna eso
   useEffect(() => {
@@ -28,7 +26,7 @@ const useAudio = url => {
     return () => {
       audio.removeEventListener('ended', () => setPlaying(false));
     };
-  }, []);
+  }, [audio]);
 
   //como todo hook retornamos nuestros estados 
   return [playing, toggle];

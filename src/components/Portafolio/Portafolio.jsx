@@ -1,5 +1,5 @@
 import './Portafolio.css';
-import { useState, useRef, useEffect } from 'react';
+import { useState} from 'react';
 
 
 const proyectos = [
@@ -32,10 +32,7 @@ function Portafolio() {
   setInterval(() => {
     setPanal(!panal)
   }, 20000);
-  //const handlePortafolio = (e) => {
-  //  console.log(e.target)
-  //  setPanal(!panal)
-  //}
+
 
   return (
     <>
@@ -44,7 +41,7 @@ function Portafolio() {
           {proyectos.map((proyecto) => (
             <li className="member co-funder" key={proyecto.nombre}>
               <div className="thumb">
-                <img src={proyecto.img}></img>
+                <img src={proyecto.img} alt="logo tecnologia"/>
               </div>
               <div className="description">
                 <h3>{proyecto.nombre}</h3>
@@ -53,9 +50,6 @@ function Portafolio() {
             </li>
           ))}
         </ul>
-        {//<img src={corazon} className="portafolio-corazon"></img>
-          //<img src={corazon} className="portafolio-corazon-2"></img>
-        }
       </div>
     </>
   )

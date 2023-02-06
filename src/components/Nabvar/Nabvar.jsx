@@ -1,5 +1,5 @@
 import './Nabvar.css';
-import {useState, useRef} from 'react';
+import {useState} from 'react';
 import {BiChevronsDown} from 'react-icons/bi';
 
 function Navbar() {

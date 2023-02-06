@@ -6,8 +6,8 @@ function PrincipalImg() {
 
   return (
     <>
-      <div className={`imagen-principal`}>
-        <img src={Manos}></img>
+      <div className='imagen-principal'>
+        <img src={Manos} alt="imagende manos"/>
       </div>
     </>
   )

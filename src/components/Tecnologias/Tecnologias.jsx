@@ -90,7 +90,6 @@ function Tecnologias() {
    useEffect(()=>{
      if(window.screen.width < 728){
     setPostPerPage(3)
-     console.log(postPerPage)
    }else{
     setPostPerPage(6) 
    }
