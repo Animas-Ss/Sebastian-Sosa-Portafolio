@@ -9,6 +9,7 @@ import SobreMi from './components/SobreMi/SobreMi.jsx';
 import Tecnologias from './components/Tecnologias/Tecnologias.jsx';
 import Contacto from './components/Contacto/Contacto.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import Nav from "./components/Nabvar/Nav";
 
 
 export default function App() {
@@ -23,7 +24,9 @@ export default function App() {
   
   return (
     <>
-      <Nabvar />
+      {//<Nabvar />
+      }
+      <Nav/>
       <header id="home">
       <Search />
       { mocontacto &&

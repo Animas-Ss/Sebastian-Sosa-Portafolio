@@ -49,10 +49,6 @@ function Contacto() {
             </div>
           </div>
           <div className="formulario-izquierda">
-            <div className="formulario-izquierda-header">
-              <h3>Envia tu preguntas</h3>
-              <small>Gracias por contactarme</small>
-            </div>
             <form className="formulario-izquierda-datos" onSubmit={handleSubmit}>
               <div className="inputBox">
                 <input type="text"

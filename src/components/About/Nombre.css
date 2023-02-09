@@ -2,6 +2,7 @@
 {
   position: relative;
   top: 10%;
+  left: 90px;
   /*background: blue;*/
   display:inline-block;
 }
@@ -19,10 +20,10 @@
   letter-spacing: 5px;
   text-shadow: 6px 6px 15px black, -6px -6px 15px white;
 }
-span{
+.about-nombre_1 span{
   transition: 1s ease-in-out;
 }
-span:hover
+.about-nombre_1 span:hover
 {
   z-index: 1;
   font-size: 1.5em;

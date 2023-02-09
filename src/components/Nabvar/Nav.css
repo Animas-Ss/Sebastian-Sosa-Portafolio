@@ -1,0 +1,213 @@
+.navegation
+{
+    position: fixed;
+    inset: 40px 0 40px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 75px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.navegation.active
+{
+    width: 180px;
+}
+
+.menuToggle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 23px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menuToggle::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+}
+
+.navegation.active .menuToggle::before
+{
+    transform: translateY(0) rotate(45deg);
+}
+.menuToggle::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(8px);
+    box-shadow: 0 -8px 0 #333;
+    transition: 0.5s;
+}
+
+.navegation.active .menuToggle::after
+{
+    transform: translateY(0) rotate(-45deg);
+    box-shadow: 0 0 0 #333;
+}
+
+.navegation ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navegation ul li{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-radius: 12px;
+    border: 8px solid transparent;
+    transition: 0.5s;
+}
+.navegation ul li.active
+{
+    transform: translateX(30px);
+    background: #cfd1e1;
+}
+
+.navegation ul li::before
+{
+    content: '';
+    position: absolute;
+    top: -28px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 5px 0 5px #cfd1e1;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: 0.5s;
+}
+.navegation ul li.active::before
+{
+    right: 22px;
+    transform: scale(1);
+}
+
+.navegation ul li::after
+{
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 6px -3px 0 3px #cfd1e1;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: 0.5s;
+}
+.navegation ul li.active::after
+{
+    right: 22px;
+    transform: scale(1);
+}
+
+.navegation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.navegation ul li a .nav-icono
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.70em;
+    line-height: 60px;
+    border: 6px solid transparent;
+    transition: 0.5;
+}
+
+.navegation ul li.active a .nav-icono
+{
+    color: #fff;
+    background: blue;
+}
+.navegation ul li a .nav-icono::before
+{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blue;
+    filter: blur(6px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.navegation ul li.active a .nav-icono::before
+{
+    opacity: 0.5;
+}
+.navegation ul li a .nav-icono::after
+{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -60px;
+    width: 25px;
+    height: 25px;
+    background: blue;
+    border: 6px solid #cfd1e1;
+    border-radius: 50%;
+}
+.navegation ul li a .nav-text
+{
+    position: relative;
+    padding: 0 15px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.navegation.active ul li a .nav-text
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navegation ul li.active a .nav-text
+{
+    color: blue;
+}

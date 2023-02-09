@@ -71,7 +71,14 @@ img{
   overflow: hidden;
   z-index: 10;
 }
-
+.sobre-informacion-titulo
+{
+  margin-bottom: 20px;
+}
+.sobre-informacion-contenido{
+  text-align: center;
+  padding: 10px;
+}
 .sobre-informacion span{
   position: absolute;
   inset:0;

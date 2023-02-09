@@ -42,16 +42,16 @@ function SobreMi() {
               name="manos" 
               className={`sobre-image-arriba ${manos ? "activo-image-arriba" : null}`} alt="manos robot"/>
             <div className='sobre-informacion-titulo'>
-              {menuInfo.disciplina && <h3>DISCIPLINA</h3>}
+              {menuInfo.disciplina && <h3>DICIPLINA</h3>}
               {menuInfo.crecer && <h3>CRECER</h3>}
               {menuInfo.aprender && <h3>APRENDER</h3>}
               {menuInfo.desarrollar && <h3>DESARROLLAR</h3>}
             </div>
             <div className='sobre-informacion-contenido'>
-              {menuInfo.disciplina && <h1>diciplina</h1>}
-              {menuInfo.crecer && <h1>crecer</h1>}
-              {menuInfo.aprender && <h1>aprender</h1>}
-              {menuInfo.desarrollar && <h1>desarrollar</h1>}
+              {menuInfo.disciplina && <p>"Es una cualidad fundamental apra poder aprender y llegar a lograr las metas propuestas"</p>}
+              {menuInfo.crecer && <p>"Todo lo que hacemos es para poder crecer en todos los roles que ejercemos en la vida . no solo en el habiente profecional . crecer es lo que me motiva"</p>}
+              {menuInfo.aprender && <p>"es fundamental en mi vida , ya que siempre hay algo que no sabemos"</p>}
+              {menuInfo.desarrollar && <p>"Con el desarrollo , me refiero a todo desarrollar proyectos , desarrollarme como profecional, desarrollar mis conocimientos"</p>}
             </div>
           </div>
         </div>
