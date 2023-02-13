@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import './Nav.css'
+import React, { useEffect, useRef } from "react";
+import './NavResponsive.css'
 
 import { AiOutlineHome } from 'react-icons/ai';
 import { TbBrandTelegram } from 'react-icons/tb';
@@ -45,14 +45,12 @@ const navListzonas = [
     },
 ]
 
-export default function Nav() {
-    const [navActivo, setNavActivo] = useState(false);
-    //const [zonas, setZonas] = useState()
-    const navRef = useRef().current;
+export default function NavResponsive() {
+    const resRef = useRef().current;
     
 
     useEffect(()=>{
-        const lista = document.querySelectorAll(".nav-lista");
+        const lista = document.querySelectorAll(".responsive-lista");
         function activelinknav(){
             lista.forEach((item)=> item.classList.remove("active"))
             this.classList.add("active");
@@ -61,14 +59,12 @@ export default function Nav() {
     },[])
  
     return (
-        <div className={`navegation ${navActivo ? "active" : ""}`}>
-            <div className="menuToggle" onClick={() => setNavActivo(!navActivo)}></div>
+        <div className="responsive">
             <ul >
                 {navListzonas.map((list) => (
-                    <li key={list.name} ref={navRef} className="nav-lista">
+                    <li key={list.name} ref={resRef} className="responsive-lista">
                         <a href={`#${list.direccion}`}>
-                            <span className="nav-icono">{list.icon}</span>
-                            <span className="nav-text">{list.name}</span>
+                            <span className="responsive-icono">{list.icon}</span>
                         </a>
                     </li>
                 ))}

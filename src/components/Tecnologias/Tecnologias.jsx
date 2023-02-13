@@ -85,15 +85,21 @@ function Tecnologias() {
   //parte para paginacion
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(6);
+  
+  const [cardResponsive, setCardResponsive] = useState(window.innerWidth);
 
+  const modificacionCartas = ()=>{
+     setCardResponsive(window.innerWidth);
+     cardResponsive >  768 ? setPostPerPage(6) : setPostPerPage(3);
+  }
   
    useEffect(()=>{
-     if(window.screen.width < 728){
-    setPostPerPage(3)
-   }else{
-    setPostPerPage(6) 
-   }
-   }, [window.screen.width])
+    cardResponsive >  768 ? setPostPerPage(6) : setPostPerPage(3);
+    window.addEventListener('resize', modificacionCartas)
+    return ()=>{
+      window.removeEventListener('resize',modificacionCartas)
+    } 
+   }, [cardResponsive])
 
   // estado de los botones 
   const [dev, setDev] = useState({

@@ -31,7 +31,7 @@ function SobreMi() {
         <div className={`sobre-disciplina-inferior ${menuInfo.aprender ? "activo-inferior" : null}`}>aprender</div>
         <div className={`sobre-disciplina ${menuInfo.desarrollar ? "activo-arriba" : null}`}>desarrollar</div>
         <div className={`sobre-disciplina-inferior ${menuInfo.desarrollar ? "activo-inferior" : null}`}>desarrollar</div>
-     
+        <div className='sobre-imagen'></div>
         <div className='sobre-informacion'>
           <span></span>
           <div className='sobre-informacion-datos'>
@@ -48,7 +48,7 @@ function SobreMi() {
               {menuInfo.desarrollar && <h3>DESARROLLAR</h3>}
             </div>
             <div className='sobre-informacion-contenido'>
-              {menuInfo.disciplina && <p>"Es una cualidad fundamental apra poder aprender y llegar a lograr las metas propuestas"</p>}
+              {menuInfo.disciplina && <p>"Es una cualidad fundamental para poder aprender y llegar a lograr las metas propuestas"</p>}
               {menuInfo.crecer && <p>"Todo lo que hacemos es para poder crecer en todos los roles que ejercemos en la vida . no solo en el habiente profecional . crecer es lo que me motiva"</p>}
               {menuInfo.aprender && <p>"es fundamental en mi vida , ya que siempre hay algo que no sabemos"</p>}
               {menuInfo.desarrollar && <p>"Con el desarrollo , me refiero a todo desarrollar proyectos , desarrollarme como profecional, desarrollar mis conocimientos"</p>}

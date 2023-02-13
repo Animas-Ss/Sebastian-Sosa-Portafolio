@@ -1,6 +1,5 @@
-import {useState} from "react";
+import { useEffect, useState} from "react";
 import './App.css'
-import Nabvar from './components/Nabvar/Nabvar.jsx';
 import Search from './components/Search/Search.jsx';
 import Nombre from './components/About/Nombre.jsx';
 import Portafolio from './components/Portafolio/Portafolio.jsx';
@@ -10,13 +9,26 @@ import Tecnologias from './components/Tecnologias/Tecnologias.jsx';
 import Contacto from './components/Contacto/Contacto.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Nav from "./components/Nabvar/Nav";
+import NavResponsive from "./components/Nabvar/NavResponsive";
 
 
 export default function App() {
 
   
   const [mocontacto, setMocontacto] = useState(false);
+  const [widthPantalla, setWidthPantalla] = useState(window.innerWidth);
   
+  const handlePantalla = () => {
+    setWidthPantalla(window.innerWidth);
+  }
+
+  useEffect(()=>{
+    window.addEventListener('resize', handlePantalla);
+    return()=>{
+      window.removeEventListener('resize', handlePantalla);
+    }
+  })
+
   const handleModal = () =>{
     setMocontacto(!mocontacto)
     console.log("contacto");
@@ -24,9 +36,7 @@ export default function App() {
   
   return (
     <>
-      {//<Nabvar />
-      }
-      <Nav/>
+      {widthPantalla > 768 ? <Nav/> : <NavResponsive/>}
       <header id="home">
       <Search />
       { mocontacto &&

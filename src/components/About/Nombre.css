@@ -82,8 +82,7 @@
 @media only screen and (max-width: 768px){
   .about-nombre{
     top: 20%;
-    left:10px;
-    width: 100%;
+    left:20px;
   }
   .about-nom{
     width: 100%;
@@ -102,6 +101,7 @@
   .about-leyenda
 {
   position: absolute;
+  width: 400px;
   top: 220px;
   font-size: 1.4em;
   font-family: 'Kolker Brush', cursive;
@@ -120,6 +120,7 @@
    width: 90vw;
    height: 5rem;
    font-size: 1.5rem;
+   margin: 0;
   }
 }
 
